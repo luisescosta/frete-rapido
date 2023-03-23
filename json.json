@@ -1,0 +1,45 @@
+{
+	"shipper": {
+        "registered_number": "25438296000158",
+        "token": "1d52a9b6b78cf07b08586152459a5c90",
+        "platform_code": "5AKVkHqCn"
+   },
+	"simulation_type": [0],
+    "recipient":{
+		 "type": 1,
+		 "zipcode": 1311000,
+		 "country": "BRA"
+   },
+   "dispatchers": [
+        {
+            "registered_number": "25438296000158",
+            "zipcode": "29161376",
+            "volumes":[
+                {
+                    "amount":1,
+                    "category":7,
+                    "sku":"abc-teste-123",
+                    "price":349,
+                    "height":0.2,
+                    "width":0.2,
+                    "length":0.2,
+                    "unitary_weight": 5,
+                    "unitary_price": 349
+                },
+                {
+
+                    "amount":2,
+                    "category":7,
+                    "sku":"abc-teste-527",
+                    "price":556,
+
+                    "height":0.4,
+                    "width":0.6,
+                    "length":0.15,
+                    "unitary_weight":4,
+                    "unitary_price": 278
+                }
+             ]    
+        }
+   ]
+}

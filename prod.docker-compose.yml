@@ -1,0 +1,37 @@
+version: '3'
+services:
+    api:
+        container_name: freterapido-api
+        build:
+            dockerfile: Dockerfile
+            context: .
+            target: production
+        volumes:
+            - .:/usr/src/app
+        env_file:
+            - .env
+        ports:
+            - 3000:3000
+        networks:
+            - freterapido-network
+    postgres:
+        image: postgres:14.1-alpine
+        container_name: freterapido-db
+        restart: always
+        volumes:
+            - "postgres-data:/var/lib/postgresql/data"
+        environment:
+            - POSTGRES_USER=freterapido
+            - POSTGRES_PASSWORD=c4f7a7be-69f6-4daa-bcba-72f3838269cc
+            - POSTGRES_DB=freterapido
+        ports:
+            - "5444:5432"
+        networks:
+            - freterapido-network
+networks:
+  freterapido-network:
+    driver: bridge
+volumes:
+    cache:
+        driver: local
+    postgres-data:
